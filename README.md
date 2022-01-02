@@ -10,20 +10,25 @@ Once completing the macros, I was tasked with refactoring the code to be compati
 
 The results of the analysis show that overall, the green energy stocks performed better in 2017 than 2018 with a few exceptions. In 2017, all of the stocks in this analysis performed with positive return except for 'TERP' that returned -7.2% for the year. In 2018, all the stocks performed with a negative return except for "ENPH' (+81.9%) and 'RUN' (+84.0%). The return and total daily volume are also indicators of how volatile each stock is and the associated risk level. The results are shown in the two figures below:
 
-[insert results]
+|<img width="370" alt="Stock_Analysis_2017" src="https://user-images.githubusercontent.com/95327115/147886200-8afa0b50-c069-4855-b17f-0acb142e2940.png">|<img width="368" alt="Stock_Analysis_2018" src="https://user-images.githubusercontent.com/95327115/147886288-acbaa549-57a3-4939-ad19-62eca0d76943.png">|
+|:--:|:--:|
+| *Stock Analysis Results 2017* | *Stock Analysis Results 2018* |
 
 The original macros was designed to loop through the dataset twelve (12) times, once for each ticker symbol. With over 3,000 rows of data, the macros would have to loop through over 36,000 rows of data. In the refactored code, the macros only loops through the data set once, determining when a new ticker starts and ends using an if-then statement within the single loop. See the code examples below:
 
-[insert loops]
+|<img width="483" alt="Original_VBS_Code" src="https://user-images.githubusercontent.com/95327115/147886303-274432d1-7f65-47e0-8ef2-6e0d10c2af06.png">|<img width="587" alt="Refactored_VBS_Code" src="https://user-images.githubusercontent.com/95327115/147886307-1088e57f-8fb4-4213-8dc0-7699a508f82b.png">|
+|:--:|:--:| 
+| *Original VBS Code* | *Refactored VBS Code* |
 
 Due to the design of the refactored code, the macros has a significantly shorter execution time. This is expected as the refactored code only loops through approxiamtely 3,000 rows of data compared to the 36,000 rows of data in the original. See the execution times below:
 
-[insert old times and new times]
+|<img width="273" alt="Original_Runtime_2017" src="https://user-images.githubusercontent.com/95327115/147886313-522b594f-bdf4-4083-93e4-00c97d9f4087.png">|<img width="271" alt="Original_Runtime_2018" src="https://user-images.githubusercontent.com/95327115/147886319-421a87ce-debd-459a-8e94-49298644b487.png">|
+|:--:|:--:| 
+| *Original Execution Time 2017* | *Original Execution Time 2018* |
 
-
-![VBA_Challenge_2017](https://user-images.githubusercontent.com/95327115/147885893-3d635078-7018-48e4-956b-e385e22ba49a.png)
-![VBA_Challenge_2018](https://user-images.githubusercontent.com/95327115/147885899-e3e82300-2e05-473e-8764-8e3de346835a.png)
-
+|![VBA_Challenge_2017](https://user-images.githubusercontent.com/95327115/147885893-3d635078-7018-48e4-956b-e385e22ba49a.png)|![VBA_Challenge_2018](https://user-images.githubusercontent.com/95327115/147885899-e3e82300-2e05-473e-8764-8e3de346835a.png)|
+|:--:|:--:| 
+| *Refactored Execution Time 2017* | *Refactored Execution Time 2018* |
 
 ## Summary
 
